@@ -1,0 +1,37 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Book Now{% endblock title %}
+{% block main-content %}
+<div id="page-container"> 
+<div class="container my-5">
+ <div class="row">
+ <h3>Welcome <span class="text-capitalize">{{request.user}}</span></h3>
+  <div class="col-sm-2 border-end">
+   <ul class="list-unstyled">
+    <li class="d-grid"><a href="{% url 'mybookings' %}" class="btn btn-primary">Bookings</a></li>
+   </ul>
+  </div>
+  <div class="col-sm-9 offset-sm-1">
+      {% for op in order_placed %}
+   <div class="row shadow-sm mb-3">
+    <div class="col-sm-2">
+        <img src="{{op.tour.product_image.url}}" alt=""
+    srcset="" class="img-fluid" height="150" width="150"></div>
+    <div class="col-sm-7">
+        <p>Tour : {{op.tour.city}}</p>
+        <p>Traveller : {{op.quantity}}</p>
+        <p>Price: {{op.total_cost}}</p>
+    </div>
+    <div class="col-sm-3 fw-bold">
+        <p>Status : {{op.status}}</p>
+        {% if op.status == 'Booked'%}
+       
+                {% endif %}
+
+    </div>
+   </div>
+   {% endfor %}
+  </div>
+ </div>
+</div>
+{% endblock main-content %}

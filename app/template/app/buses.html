@@ -1,0 +1,48 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Flights{% endblock title %}
+{% block main-content %}
+
+
+<div class="container">
+    <div class="row my-3">
+        <div class="col-sm-6 offset-sm-3">
+            <h3>Buese Registration</h3>
+            <hr>
+
+            <form action="" method="post" novalidate class="shadow p-5">
+               
+                <div class="col-12">
+                    <label for="inputName" class="form-label">From</label>
+                    <input type="text" class="form-control" id="inputEmail">
+                  </div>
+                  <div class="col-12">
+                    <label for="inputName" class="form-label">To</label>
+                    <input type="text" class="form-control" id="inputEmail">
+                  </div>
+                <div class="row">
+                  <div class="input-grp col-md-6">
+                    <label>Departing</label>
+                    <input type="date" class="form-control select-date">
+                    </div>
+                    <div class="input-grp col-md-6">
+                        <label>Traveller</label>
+                        <input type="number" class="form-control" value="1">
+                        </div>
+                    
+                 </div>
+                 <div class="row">
+                    
+                      <div class="input-grp col-md-6">
+                        <button type="button" class="btn btn-primary flight">Search Buses</button>
+                        </div> 
+                   </div>
+                   
+            
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock main-content %}

@@ -1,0 +1,44 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Search Results{% endblock title %}
+{% block main-content %}
+
+
+<div class="container">
+  <h2>Trains :</h2>
+<table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Train No.</th>
+        <th scope="col">Train Name</th>
+        <th scope="col">From</th>
+        <th scope="col">To</th>
+        <th scope="col">Time</th>
+        <th scope="col">Price</th>
+        <th scope="col"></th>
+
+      </tr>
+    </thead>
+    {% for st in train %}
+    <tbody>
+      <tr>
+        <td>{{train_no}}</td>
+        <td>{{train_name}}</td>
+        <td>{{train_from}}</td>
+        <td>{{train_to}}</td>
+        <td>{{train_time}}</td>
+        <td>{{train_price}}</td>
+        <td><a href="{% url 'book-now' %}" class="btn btn-danger shadow ">Book Now</a></td>
+        
+      </tr>
+     
+    </tbody>
+    {% endfor %}
+  </table>
+
+
+</div>
+
+
+
+{% endblock main-content %}

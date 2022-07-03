@@ -1,0 +1,52 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Trains{% endblock title %}
+{% block main-content %}
+
+
+
+
+
+<div class="container">
+    <div class="row my-3">
+        <div class="col-sm-6 offset-sm-3">
+            <h3>Train Registration</h3>
+            <hr>
+
+            <form action="/strain" method="get" novalidate class="shadow p-5">
+               
+                <div class="col-12">
+                    <label for="inputName" class="form-label">Enter city/station name</label>
+                    <input name="strain" type="text" class="form-control" id="strain">
+                  </div>
+                  <div class="col-12">
+                    <label for="inputName" class="form-label">Enter city/station name</label>
+                    <input type="text" class="form-control" id="inputEmail">
+                  </div>
+                <div class="row">
+                  <div class="input-grp col-md-6">
+                    <label>Departing</label>
+                    <input type="date" class="form-control select-date">
+                    </div>
+                    <div class="input-grp col-md-6">
+                        <label>Traveller</label>
+                        <input type="number" class="form-control" value="1">
+                        </div>
+                    
+                 </div>
+                 <div class="row">
+                    
+                      <div class="input-grp col-md-6">
+                        <button type="submit" class="btn btn-primary flight">Search Trains</button>
+                        </div> 
+                   </div>
+                   
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock main-content %}
